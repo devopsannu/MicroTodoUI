@@ -14,8 +14,8 @@ jobs:
     env:
       IMAGE_NAME: todo-ui
       IMAGE_TAG: v4
-      ACR_NAME: devopsinsidersacr235
-      ACR_LOGIN_SERVER: devopsinsidersacr235.azurecr.io
+      ACR_NAME: prodacrk8s01
+      ACR_LOGIN_SERVER: prodacrk8s01.azurecr.io
 
     steps:
       - name: Checkout code
@@ -24,9 +24,9 @@ jobs:
       - name: Azure Login
         uses: Azure/login@v2.3.0
         with:
-          client-id: ff27bcf6-f60c-4a57-8b01-8eee5de2a9cd
-          tenant-id: 0f7010fd-209e-4344-8457-043ffb37143b
-          subscription-id: 1075ec7a-b17a-4f37-bf3f-9d68c4506dc1
+          client-id: 2220b4e2-a922-45f4-ba52-32de3e53fd4a
+          tenant-id: 50b4c848-d426-4de1-ad70-fb13c2692bc9
+          subscription-id: 2725a90a-ca7e-4474-afbb-38294afb9db3
 
       - name: Log in to ACR
         run: |
