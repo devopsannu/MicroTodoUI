@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: todo-ui-ingress
 spec:
-  ingressClassName: nginx
+  ingressClassName: azure-application-gateway
   rules:
   - host: ui.anupam.fun
     http:
