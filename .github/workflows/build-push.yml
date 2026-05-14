@@ -13,7 +13,7 @@ jobs:
 
     env:
       IMAGE_NAME: todo-ui
-      IMAGE_TAG: v4
+      IMAGE_TAG: v1
       ACR_NAME: prodacrk8s01
       ACR_LOGIN_SERVER: prodacrk8s01.azurecr.io
 
@@ -24,9 +24,9 @@ jobs:
       - name: Azure Login
         uses: Azure/login@v2.3.0
         with:
-          client-id: 2220b4e2-a922-45f4-ba52-32de3e53fd4a
-          tenant-id: 50b4c848-d426-4de1-ad70-fb13c2692bc9
-          subscription-id: 2725a90a-ca7e-4474-afbb-38294afb9db3
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       - name: Log in to ACR
         run: |
